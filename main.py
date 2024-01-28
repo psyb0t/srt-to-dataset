@@ -26,8 +26,7 @@ def remove_junk(text):
     text = text.replace("<i>", "")
     text = text.replace("</i>", "")
 
-    pattern = r"^\([^)]+\)$"
-    text = re.sub(pattern, "", text, flags=re.MULTILINE)
+    text = re.sub(r"^\([^)]+\)$", "", text, flags=re.MULTILINE)
 
     return text.strip()
 
